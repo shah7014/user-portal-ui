@@ -35,7 +35,7 @@ export class UserService {
   }
 
   public resetPassword(email: string): Observable<CustomHttpResponse | HttpErrorResponse> {
-    return this.http.get<CustomHttpResponse>(`${this.apiUrl}/user/resetPassword/${email}`);
+    return this.http.get<CustomHttpResponse>(`${this.apiUrl}/user/resetpassword/${email}`);
   }
 
   // use observe on event bcoz we want to track the progress
