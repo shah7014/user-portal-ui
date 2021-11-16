@@ -14,7 +14,6 @@ export class AuthenticationGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
-    console.log('inside gueard');
     if (this.authenticationService.isUserLoggedIn()) {
       return true;
     }

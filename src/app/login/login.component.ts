@@ -44,7 +44,6 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.subscriptions.push(
       this.authenticationService.login(this.loginForm.value).subscribe(
         (response: HttpResponse<User>) => {
-          console.log('response', response);
           const token = response.headers.get(HeaderType.JWT_TOKEN);
           this.authenticationService.saveToken(token);
           const loggedInUser: User = response.body;
@@ -67,7 +66,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.notificationService.showFailure(message);
     }
     else {
-      this.notificationService.showFailure('Something went wrong. Please try again'.toUpperCase());
+      this.notificationService.showFailure('Something went wrong. Please try again');
     }
   }
 

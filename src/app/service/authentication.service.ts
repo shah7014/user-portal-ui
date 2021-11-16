@@ -49,7 +49,6 @@ export class AuthenticationService {
   // when we login so for subsequent calls we can directly get token
   public saveToken(token: string): void {
     this.token = token;
-    console.log('token:- ', token);
     localStorage.setItem('token', token);
   }
 
