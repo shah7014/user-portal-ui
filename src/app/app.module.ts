@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserManagementModule } from './user-management/user-management.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     NotifierModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    UserManagementModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

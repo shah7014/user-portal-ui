@@ -34,7 +34,6 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   public onLogin() {
-    console.log('login form value:- ', this.loginForm.value);
     this.showLoading = true;
     //const username = this.loginForm.get('username').value;
     //const password = this.loginForm.get('password').value;
@@ -53,7 +52,6 @@ export class LoginComponent implements OnInit, OnDestroy {
           this.router.navigate(['/user/management']);
         },
         (errorResponse: HttpErrorResponse) => {
-          console.log('error:- ', errorResponse);
           this.showErroNotification(errorResponse);
           this.showLoading = false;
         })
