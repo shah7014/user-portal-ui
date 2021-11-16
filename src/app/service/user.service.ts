@@ -39,7 +39,7 @@ export class UserService {
   }
 
   // use observe on event bcoz we want to track the progress
-  public updateProfileImage(formData: FormData): Observable<HttpEvent<User>> {
+  public updateProfileImage(formData: FormData): Observable<HttpEvent<User> | HttpErrorResponse> {
     return this.http.post<User>(
       `${this.apiUrl}/user/updateProfileImage`,
       formData,

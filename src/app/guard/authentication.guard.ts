@@ -14,11 +14,12 @@ export class AuthenticationGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
+    console.log('inside gueard');
     if (this.authenticationService.isUserLoggedIn()) {
       return true;
     }
     this.router.navigate(['/login']);
-    this.notifiactionService.showFailure('You need to log in to access this page'. toUpperCase());
+    this.notifiactionService.showFailure('You need to log in to access this page'.toUpperCase());
     return false;
   }
 

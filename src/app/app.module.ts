@@ -9,6 +9,7 @@ import { NotifierModule } from 'angular-notifier';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { UserComponent } from './user/user.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NotifierModule
+    NotifierModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
