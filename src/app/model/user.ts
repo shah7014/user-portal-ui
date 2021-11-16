@@ -13,7 +13,7 @@ export class User {
 
   //public lastLoginDate;
   // different from api name
-  public loginDateDisplay: Date;
+  public lastLoginDateDisplay: Date;
 
   public joinDate: Date;
   public role: string;
